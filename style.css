@@ -163,3 +163,27 @@ button:active {
 .no-select {
     user-select: none;
 }
+
+.window {
+    position: relative;
+    background-color: gray;
+    border-top: 2.5px outset white;
+    border-right: 2.5px outset rgb(40, 40, 40);
+    border-left: 2.5px outset white;
+    border-bottom: 2.5px outset rgb(40, 40, 40);
+    resize: both;
+    width: 320px;
+    min-width: 80px;
+    height: 250px;
+    min-height: 60px;
+}
+
+.windowHeader {
+    position: absolute;
+    background-color: midnightblue;
+    width: 100%;
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
