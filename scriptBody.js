@@ -43,7 +43,7 @@ apps.forEach((app) => {
             
         const window = document.createElement("div");
         window.classList.add("window");
-        windows.appendChild('window');
+        windows.appendChild(window);
         
         const windowHeader = document.createElement("div");
         windowHeader.classList.add("windowHeader");
