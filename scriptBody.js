@@ -15,6 +15,7 @@ document.querySelectorAll('.commonApp').forEach((app) => {
 });
 
 const apps = document.querySelectorAll('.commonApp');
+const windows = document.getElementById('windows');
 
 document.addEventListener('click', (event) => {
     const clickedApp = event.target instanceof Element
@@ -29,11 +30,43 @@ document.addEventListener('click', (event) => {
 });
 
 apps.forEach((app) => {
-    app.addEventListener('dblclick', () => {
+    // para cada aplicativo, cria os event listeners
+    app.addEventListener('click', () => {
         apps.forEach((otherApp) => {
             otherApp.removeAttribute('data-selected');
         });
 
         app.setAttribute('data-selected', '');
     });
+    app.addEventListener('dblclick', () => {
+        // creates the window for the app
+            
+        const window = document.createElement("div");
+        window.classList.add("window");
+        windows.appendChild('window');
+        
+        const windowHeader = document.createElement("div");
+        windowHeader.classList.add("windowHeader");
+        window.appendChild('windowHeader');
+
+        windowsApps[app.id];
+    });
 });
+
+const windowsApps = {
+    "recycleBin": createRecycleWin(),
+    "folder-Favorites": createFavoritesWin(),
+    "aboutMe": createAboutWin()
+}
+
+function createRecycleWin() {
+    window.alert("Function not created yet.");
+}
+
+function createFavoritesWin() {
+    window.alert("Function not created yet.");
+}
+
+function createAboutWin() {
+    window.alert("Function not created yet.");
+}
