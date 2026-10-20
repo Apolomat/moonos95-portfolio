@@ -1,0 +1,1 @@
+const helloworld = console.log;

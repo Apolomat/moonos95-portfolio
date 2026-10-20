@@ -1,0 +1,165 @@
+@import url('https://fonts.cdnfonts.com/css/public-pixel');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-color: teal;
+    overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, div, section, ul, li, label {
+    display: inline-flex;
+    color: black;
+    font-family: 'Public Pixel', sans-serif;
+}
+
+.display-none {
+    display: none !important;
+}
+
+ul {
+    min-width: none;
+    min-height: none;
+}
+
+button {
+    font-family: 'Public Pixel', sans-serif;
+    font-size: 8px;
+    background-color: gray;
+    padding: 0 4px;
+    border-top: 2px outset white;
+    border-right: 2px outset rgb(40, 40, 40);
+    border-left: 2px outset white;
+    border-bottom: 2px outset rgb(40, 40, 40);
+}
+button:active {
+    border-top: 2px inset rgb(40, 40, 40);
+    border-right: 2px inset white;
+    border-left: 2px inset rgb(40, 40, 40);
+    border-bottom: 2px inset white;
+}
+
+#taskbar {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 26px;
+    width: 100vw;
+    background-color: gray;
+    border: 1px groove gray;
+    z-index: 10;
+}
+#taskbarUL li button {
+    height: 24px;
+    background-color: gray;
+    padding: 0 4px;
+    font-size: 8px;
+    border-top: 2px outset white;
+    border-right: 2px outset rgb(40, 40, 40);
+    border-left: 2px outset white;
+    border-bottom: 2px outset rgb(40, 40, 40);
+}
+#taskbarUL li button:active {
+    border-top: 2px inset rgb(40, 40, 40);
+    border-right: 2px inset white;
+    border-left: 2px inset rgb(40, 40, 40);
+    border-bottom: 2px inset white;
+}
+#taskbarUL li button img {
+    user-select: none;
+    margin-top: 2px;
+    margin-right: 4px;
+}
+
+#menuPopup {
+    position: absolute;
+    left: 2px;
+    bottom: 100%;
+    z-index: 11;
+
+    display: flex;
+    flex-direction: row;
+    min-width: 180px;
+    max-height: 250px;
+    height: 250px;
+    padding: 8px;
+    background: gray;
+    border-top: 2.5px outset white;
+    border-right: 2.5px outset rgb(40, 40, 40);
+    border-left: 2.5px outset white;
+    border-bottom: 2.5px outset rgb(40, 40, 40);
+}
+#menuPopup[hidden] {
+    display: none;
+}
+#menuPopup button {
+    border: none;
+    padding: 2px;
+    max-width: 180px;
+    width: 180px;
+    min-height: 32px;
+    text-align: left;
+    line-height: 32px;
+    padding-inline: 4px;
+    padding-block: 2px;
+    display: inline-flex;
+}
+#menuPopup button:hover {
+    background-color: midnightblue;
+    color: white;
+}
+#menuPopup button:hover span {
+    color: white;
+}
+#menuOptions {
+    display: flex;
+    flex-direction: column;
+}
+#menuOptions img {
+    width: 32px;
+    height: 32px;
+    margin-right: 4px;
+}
+
+#desktop {
+    display: grid;
+    grid-template-columns: 88px 88px 88px 88px 88px 88px 88px 88px 88px 88px 88px 88px 88px 88px 88px;
+    grid-template-rows: 88px 88px 88px 88px 88px 88px;
+    align-items: center;
+}
+
+.commonApp {
+    display: flex;
+    flex-direction: column;
+    max-width: 96px;
+    align-items: center;
+    position: relative;
+    left: 8px;
+}
+.commonApp[data-selected] .desktopAppName {
+    cursor: pointer;
+    background-color: midnightblue;
+    border: 1px dotted white;
+}
+.commonApp[data-selected] img {
+    cursor: pointer;
+    filter: hue-rotate(135deg) contrast(100%) invert(10%);
+    border: 1px dotted white;
+}
+
+.desktopAppName {
+    color: white;
+    font-size: 8px;
+    margin-top: 4px;
+    user-select: none;
+}
+
+.no-select {
+    user-select: none;
+}

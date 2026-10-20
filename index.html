@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./img/icon-x16-moon95-OS.png">
+    <script src="scriptHead.js" type="application/javascript"></script>
+    <title>Site Portfolio</title>
+</head>
+<body>
+    
+    <div id="desktop">
+        <div class="commonApp" id="recycleBin" style="grid-row: 1; grid-column: 1;">
+            <img src="./img/recycle_bin-x32.png" width="32px" height="32px" draggable="false" class="no-select">
+            <label for="recycleBin" class="desktopAppName">Recycle Bin</label>
+        </div>
+        <div class="commonApp" id="folder-Favorites" style="grid-row: 2; grid-column: 1;">
+            <img src="./img/folder-favorites-x32.png" width="32px" height="32px" draggable="false" class="no-select">
+            <label for="folder-Favorites" class="desktopAppName">Favorites</label>
+        </div>
+        <div class="commonApp" id="aboutmeText" style="grid-row: 3; grid-column: 1;">
+            <img src="./img/text-file-x32.png" width="32px" height="32px" draggable="false" class="no-select">
+            <label for="aboutmeText" class="desktopAppName">About Me</label>
+        </div>
+    </div>
+
+    <nav id="taskbar" style="display: flex; flex-direction: row;">
+        <ul id="taskbarUL">
+            <li><button id="menuBtn"><img src="./img/icon-x16-moon95-OS.png" draggable="false"><span id="startBtnText" style="position: relative; top: -4px;"> Menu</span></button></li>
+        </ul>
+
+        <div id="menuPopup" hidden>
+            <div id="menuLogoImg">
+                <img src="./img/text-logo-menu-x32-y250.png" width="32px" height="250px" draggable="false">
+            </div>
+            <div id="menuOptions">
+                <button type="button" style="padding-bottom: 2px;"><img src="./img/computer-x32.png" width="32px" height="32px" draggable="false"> <u>P</u>rograms <span style="display: inline-flex; position: absolute; right: 1rem;">▶</span></button>
+                <button type="button"><img src="./img/folder-favorites-x32.png" width="32px" height="32px" draggable="false"> <u>F</u>avorites <span style="display: inline-flex; position: absolute; right: 1rem;">▶</span></button>
+            </div>
+        </div>
+    </nav>
+    
+    <script src="scriptBody.js"></script>
+</body>
+</html>
